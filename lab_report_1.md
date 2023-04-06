@@ -2,8 +2,6 @@
 
 ## Remote Connection Tutorial
 
----
-
 ## 1) Installing VScode
 
 I did not do the installation step as I already had VScode installed.
