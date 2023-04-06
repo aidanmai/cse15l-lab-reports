@@ -1,6 +1,6 @@
 # Lab 1 Lab Report
 
-##Remote Connection Tutorial
+## Remote Connection Tutorial
 
 ---
 
