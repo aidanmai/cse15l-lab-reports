@@ -65,7 +65,7 @@ biomed/1471-2156-4-6.txt:TATTTTCTCACTACAGAATTGTTGGAAGTTTGCGTCTCTCCCGAAGAGCTGGAGC
 biomed/1471-2156-4-6.txt:GATGTGGGTGCGGGACGGGAAAGAACAACACTGAAGAAACAAGTATCATTATTTCATTTGAAAAATTAGGGAAATGAATTCGAGCTCGTTTAAAC
 ```
 
-**Option 4:** `h`
+**Option 4:** `-h`
 
 The `h` command omits filenames from output. This is most useful if you don't care about where the matching strings came from, and need to get rid of the filenames before further processing.
 
