@@ -1,5 +1,7 @@
 # Lab 5 Lab Report
 
+# Part 1: Debugging Scenario
+
 ## Initial EdStem post
 
 **What environment are you using (computer, operating system, web browser, terminal/editor, and so on)?**
@@ -106,3 +108,59 @@ public class clear {
     }
 }
 ```
+
+## Summary
+
+File & directory structure: One file called `clear.java`, with the code above inside. No subdirectories necessary
+
+Code before fixing:
+
+```java
+import java.util.ArrayList;
+public class clear {
+    public static void main(String[] args) {
+        ArrayList<String> myList = new ArrayList<String>();
+        myList.add("hello");
+        myList.add("world");
+        myList.add("cse15l");
+        myList.add("yakuhai");
+
+        clearList(myList);
+        System.out.println(myList.toString());
+    }
+
+    public static void clearList(ArrayList<?> list) {
+        for(int i = 0; i < list.size(); i++) {
+            list.remove(i);
+        }
+    }
+}
+```
+
+Command line to trigger bug:
+
+```
+javac clear.java
+java clear
+```
+
+Output of bug:
+
+```
+[world, yakuhai]
+```
+
+What to fix: This code is buggy because the for loop in the `clearList` does not account for the changing size of the array list as elements are removed. To fix the bug, change the `clearList` method body to the following:
+
+```java
+int listSize = list.size();
+for(int i = 0; i < listSize; i++) {
+    list.remove(0);
+}
+```
+
+This modified loop correctly accounts for the changing size of the Arraylist, and successfully clears the input ArrayList.
+
+# Part 2: Reflection
+
+One of my favorite things that I learned in this class was how to use web servers in Java to host our own "websites." It was really fun experimenting with different functions to give our sites. It was my first time working with a site that had any kind of backend, instead of just being a static webpage.
